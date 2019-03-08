@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VHTM</title>
+</head>
+<body>
+<script>
+function myDate(day,month,year) {
+    this.day= day;
+    this.month= month;
+    this.year = year;
+   this.getDay=function () {
+      return this.day
+   };
+   this.getMonth = function () {
+       return this.month
+   };
+   this.getFullYear = function () {
+       return this.year
+   };
+   this.setDay = function (day) {
+       this.day = day
+   };
+   this.setMonth = function (month) {
+       this.month = month
+   };
+   this.setFullYear = function (year) {
+       this.year = year
+   };
+   this.setDate = function (day,month,year) {
+       this.day = day;
+       this.month = month;
+       this.year = year;
+   };
+   this.toString = function () {
+       if (day<10&&month<10){
+           return  alert(("0"+this.day+"/0"+this.month+"/"+this.year))
+       }else if(day<10){
+           return alert(("0"+this.day+this.month+"/"+this.year))
+       }else {return alert((this.day +"/"+ this.month + "/" + this.year))}
+   }
+    }
+    let date = new myDate(2,2,2007);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getFullYear();
+    alert(day +" / "+ month + " / "+ year);
+    date.setDay(10);
+    date.setMonth(11);
+    date.setFullYear(1996);
+    alert(date.day +" / "+ date.month + " / "+ date.year);
+    date.setDate(2,2,1996);
+    alert(date.day +" / "+ date.month + " / "+ date.year);
+    date.toString();
+
+
+
+</script>
+</body>
+</html>
